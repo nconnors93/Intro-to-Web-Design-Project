@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>North Star Bakery</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Back to Home</a></li>
+        <li><a href="products.html"> Our Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+    <img src="images_videos/bakery-logo_c.png" alt="bakery logo" height="200" width="200">
+</nav>
+    <main>
+        <h1>Hours and Location</h1>
+         <p>We are located at 123 Main Street, Hometown, USA. Right next to the local library and across the street from the park.
+            <br>
+            We are open Monday through Friday from 7am to 6pm and Saturday from 8am to 4pm. We are closed on Sundays.</p>
+        
+       
+      <h2>Contact Us!</h2>
+      <p>Have questions, feedback or want to preorder? We'd love to hear from you!</p>
+      <p>Your draft is saved in this browser on this device until you clear it.</p>
+      <p id="draft-status" role="status" aria-live="polite"></p>
+      <form action="submit_form.php" method="post">
+        <fieldset>
+          <legend>Your Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <span class="field-checkmark" id="name-checkmark" role="img" aria-label="Name meets requirements" hidden></span>
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <span class="field-checkmark" id="email-checkmark" role="img" aria-label="Email meets requirements" hidden></span>
+        </fieldset>
+        <fieldset>
+          <legend>Request Information</legend>
+          <label for="message">Pre-order Request or Message:</label>
+          <select id="message" name="message" required>
+            <option value="" selected disabled>Choose an option</option>
+            <option value="pre-order">Pre-order request</option>
+            <option value="question">Question</option>
+          </select>
+          <br>
+          <div id="preorder-options" hidden>
+            <label for="product-type">Product type:</label>
+            <select id="product-type" name="product-type">
+              <option value="" selected disabled>Choose bread, cookies, or cake</option>
+              <option value="bread">Bread</option>
+              <option value="cookies">Cookies</option>
+              <option value="cake">Cake</option>
+            </select>
+            <br>
+            <label for="product">Specific product:</label>
+            <select id="product" name="product" disabled>
+              <option value="" selected disabled>Choose a product type first</option>
+            </select>
+            <br>
+          </div>
+          <label for="item-details">Additional details or message:</label>
+          <textarea id="item-details" name="item-details" required></textarea>
+          <br>
+          <label for="allergy">Allergies (optional):</label>
+          <textarea id="allergy" name="allergy"></textarea>
+          <br>
+          <input type="submit" value="Submit">
+          <button type="button" id="clear-draft">Clear form and saved draft</button>
+        </fieldset>
+      </form>
+    </main>
+    <script src="javascript.js"></script>
+    <footer>
+        <p>&copy; 2024 North Star Bakery. All rights reserved.</p>
+    </footer>
+</body>
